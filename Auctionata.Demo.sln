@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Demo.Domain", "Auctionata.Demo.Domain\Auctionata.Demo.Domain.csproj", "{C16D10E6-7DE2-4AD6-88F1-C1842A6B3F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Demo.DataAccess.MemoryBased", "Auctionata.Demo.DataAccess.MemoryBased\Auctionata.Demo.DataAccess.MemoryBased.csproj", "{24178AEC-E3F8-4EF8-97C3-AF037637B2D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Demo.Monads", "Auctionata.Demo.Monads\Auctionata.Demo.Monads.csproj", "{70AF74FB-1FB7-405B-859E-480CAE5C183F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Demo.Application", "Auctionata.Demo.Application\Auctionata.Demo.Application.csproj", "{F8280A9A-32BE-48FD-BC36-8BB5ACFD042A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Demo.Application.Ui", "Auctionata.Demo.Application.Ui\Auctionata.Demo.Application.Ui.csproj", "{7F2EF7C6-43CC-4DBD-9072-84D868398089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Demo.Application.Rest", "Auctionata.Demo.Application.Rest\Auctionata.Demo.Application.Rest.csproj", "{2A416A1F-0CA9-4DE4-9EE7-277E5DF4F0A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C16D10E6-7DE2-4AD6-88F1-C1842A6B3F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C16D10E6-7DE2-4AD6-88F1-C1842A6B3F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C16D10E6-7DE2-4AD6-88F1-C1842A6B3F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C16D10E6-7DE2-4AD6-88F1-C1842A6B3F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24178AEC-E3F8-4EF8-97C3-AF037637B2D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24178AEC-E3F8-4EF8-97C3-AF037637B2D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24178AEC-E3F8-4EF8-97C3-AF037637B2D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24178AEC-E3F8-4EF8-97C3-AF037637B2D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70AF74FB-1FB7-405B-859E-480CAE5C183F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70AF74FB-1FB7-405B-859E-480CAE5C183F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70AF74FB-1FB7-405B-859E-480CAE5C183F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70AF74FB-1FB7-405B-859E-480CAE5C183F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8280A9A-32BE-48FD-BC36-8BB5ACFD042A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8280A9A-32BE-48FD-BC36-8BB5ACFD042A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8280A9A-32BE-48FD-BC36-8BB5ACFD042A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8280A9A-32BE-48FD-BC36-8BB5ACFD042A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F2EF7C6-43CC-4DBD-9072-84D868398089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F2EF7C6-43CC-4DBD-9072-84D868398089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F2EF7C6-43CC-4DBD-9072-84D868398089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F2EF7C6-43CC-4DBD-9072-84D868398089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A416A1F-0CA9-4DE4-9EE7-277E5DF4F0A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A416A1F-0CA9-4DE4-9EE7-277E5DF4F0A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A416A1F-0CA9-4DE4-9EE7-277E5DF4F0A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A416A1F-0CA9-4DE4-9EE7-277E5DF4F0A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

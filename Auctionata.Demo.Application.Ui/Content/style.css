@@ -1,0 +1,20 @@
+﻿html {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif /*rtl:prepend:"Droid Arabic Kufi","Droid Sans", */;
+}
+body {
+    margin: 0px;
+    padding: 50px .83em .95em .83em;
+}
+.ui.fixed.inverted.main.menu {
+    top: 0px;
+    left: 0px;
+}
+
+.ui.portal.modal .content {
+    overflow: scroll;
+}
+
+.title {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}

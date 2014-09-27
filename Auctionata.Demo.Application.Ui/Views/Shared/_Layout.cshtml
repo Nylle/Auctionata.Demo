@@ -1,0 +1,43 @@
+﻿@using Auctionata.Demo.Application.Ui.Extensions
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Auctionata Demo</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" href="/Content/semantic/css/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="/Content/style.css">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"> </script>
+        <script src="/Content/semantic/javascript/semantic.min.js"> </script>
+        <script src="/Scripts/Cookies.js"> </script>
+    </head>
+    <body>
+        <div class="ui fixed inverted main menu">
+            <a href="/" class="title item">Auctionata Demo</a>
+            <a href="/" class="item"><i class="home icon"></i></a>
+            @Html.SemanticUiMenuItem("Items", "Items", "Home")
+            <div class="right menu"><a class="item" id="login-modal-button"><i class="user icon"></i> <span id="username">Username0815</span></a></div>
+        </div>
+            
+        <div id="main">
+            @RenderBody()
+        </div>
+        
+    </body>
+    
+    @{ Html.RenderPartial("_Login"); }
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (readCookie("username") === null) {
+                createCookie("username", $('#username').text());
+            } else {
+                $('#username').text(readCookie("username"));
+            }
+
+            $('#login-modal-button').click(function () {
+                $('#login-modal').modal('show');
+            });
+        });
+    </Script>
+</html>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Auctionata.Demo.Application.Ui.Models.Home.ItemBase>
+
+@{
+    ViewBag.Title = "Items";
+}
+
+<h2>Items</h2>
+
+<div class="ui three items">
+    @foreach (var item in Model)
+    {
+    <div class="item" id="@item.Id">
+        <div class="image">
+            <img src="@item.ImageLocations.First()">
+        </div>
+        <div class="content">
+            <div class="name">@item.Name</div>
+            <p class="description">@item.Description</p>
+        </div>
+    </div>
+    }
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.item').click(function () {
+            var id = $(this).attr('id');
+            window.location = "@Url.Action("Item", "Home")" + "/" + id;
+        });
+    });
+</script>

@@ -1,0 +1,68 @@
+﻿@model Auctionata.Demo.Application.Ui.Models.Home.Item
+
+@{
+    ViewBag.Title = "Item";
+}
+
+<div class="ui success message hidden">
+    <div class="header">Congratulations, you are highest bidder!</div>
+</div>
+
+<div class="ui warning message hidden">
+    <div class="header">Sorry, someone was faster.</div>
+</div>
+
+<div class="ui two column grid">
+    <div class="equal height row">
+        <div class="column">
+            <div class="ui segment">
+                <h2>@Model.Name</h2>
+                <p>@Model.Description</p>
+                <p>Start price: @Model.StartPrice</p>
+            </div>
+            <div class="ui message">
+                <p>Current highest bid: <span id="highest-bid">@(Model.HighestBidAmount)</span></p>
+            </div>
+            <div class="ui form">
+                <div class="ui two fields">
+                    <div class="field" id="bid-amount">
+                        <input placeholder="Amount" type="text">
+                        <div class="ui red pointing above label hidden">Amount is too small</div>
+                    </div>
+                    <div class="ui button" id="make-bid">Make a Bid</div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="column">
+            <img class="rounded ui image" width="100%" src="@Model.ImageLocations.First()">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#make-bid').click(function () {
+            var startPrice = parseFloat("@Model.StartPrice");
+            var amount = parseFloat($("#bid-amount > input").val());
+            var highestBid = parseFloat($("#highest-bid").text());
+            if (amount <= startPrice || amount <= highestBid) {
+                $('#bid-amount').addClass("error");
+                $('.ui.red.pointing.above.label.hidden').removeClass("hidden");
+            } else {
+                $('#bid-amount').removeClass("error");
+                $('.ui.red.pointing.above.label').addClass("hidden");
+                $.get("/home/makebid?id=@Model.Id&bidAmount=" + amount + "&bidderId=" + readCookie("username"), function (data, status) {
+                    $("#highest-bid").text(data.Amount);
+                    if (data.IsForeignBidder) {
+                        $('.ui.warning.message').removeClass("hidden");
+                        $('.ui.success.message').addClass("hidden");
+                    } else {
+                        $('.ui.success.message').removeClass("hidden");
+                        $('.ui.warning.message').addClass("hidden");
+                    }
+                }, "json");
+            }
+        });
+    });
+</script>

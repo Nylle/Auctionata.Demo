@@ -1,0 +1,29 @@
+﻿    <div id="login-modal" class="ui modal">
+        <i class="close icon"></i>
+        <div class="header">
+            Switch User
+        </div>
+        <div class="content">
+            <div class="ui form">
+                <div class="field">
+                    <input placeholder="Username" type="text" id="login-field">
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui black right labeled icon button">
+                Cancel <i class="remove icon"></i>
+            </div>
+            <div class="ui black right labeled icon button" id="login-button">
+                Login <i class="checkmark icon"></i>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#login-button').click(function() {
+            createCookie("username", $('#login-field').val());
+            $('#username').text($('#login-field').val());
+        });
+    });
+</Script>
