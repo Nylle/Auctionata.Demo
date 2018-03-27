@@ -1,4 +1,4 @@
-#Coding exercise
+# Coding exercise
 
 We've reviewed your CV, gotten to know a part of you during our first meeting and talked to you about Auctionata, our Technology organization and the way we think about product development.  Now we are very much interested in learning more about how you tackle and approach solving a real world problem.
 
@@ -11,28 +11,28 @@ Before we present the actual problem here are some notes up front:
 - *Next steps*:  If we like your solution and approach we'd love to have a brief pair programming session with you to implement a little piece of functionality together.  Please keep this in mind when deciding how you make your deliverables available to us.
 - *Think aloud*:  It's really helpful for us if you could provide some context around the major decisions you made.  Where and how you do this is again up to you.  If you decide to add this information in the source code please mark it up somehow so that we can distinguish between regular comments in your code, i.e. those that you would normally add to your code, and those that you add just because of our request for you to think aloud.
 
-#Requirements
+# Requirements
 
-##Narrative
+## Narrative
 
 As a potential buyer in an online auction
 I want to be able to bid on an item
 So that I can participate in the auction
 
-##Scenario 1: displaying information about the current item
+## Scenario 1: displaying information about the current item
 
 Given I am in the auction room
 Then I see the current item picture, description and name
 And I see the current highest bid with a button to place a new bid
 
-##Scenario 2: single user bidding on an item
+## Scenario 2: single user bidding on an item
 
 Given I am in the auction room
 When I place a bid on an item
 And I am the only bidder
 Then I am the highest bidder
 
-##Scenario 3: multiple users bidding on an item - you are first
+## Scenario 3: multiple users bidding on an item - you are first
 
 Given I am in the auction room
 When I place a bid on an item
@@ -40,7 +40,7 @@ And I am not the only bidder
 And my bid was placed first
 Then I am the highest bidder
 
-##Scenario 4: multiple users bidding on an item - you are not first
+## Scenario 4: multiple users bidding on an item - you are not first
 
 Given I am in the auction room
 When I place a bid on an item
@@ -48,23 +48,23 @@ And I am not the only bidder
 And my bid was not placed first
 Then I am not the highest bidder
 
-#Scoping Options
+# Scoping Options
 
 We know that might look like too much work for an interview process.  Please remember that we are only asking you to spend 8h on this exercise.  Please consider the following options to cut scope:
 
-##Option A - Backend Implementation
+## Option A - Backend Implementation
 
 - Focus heavily on backend implementation, 
 - Have a simple UI just to show what is happening behind the scenes
 - Bonus points: Provide a nice API that could easily be consumed by a single page application or any other client.
 
-##Option B - Frontend Implementation
+## Option B - Frontend Implementation
 
 - Make it a single page application that uses API's for most of the heavy business logic
 - You can mock the API to represent the result of you working together with another team to define the interfaces
 - You could make the mocks convenient for you, but not too convenient, they should be constrained by realistic assumptions.
 
-##Option C - Your own scope
+## Option C - Your own scope
 
 - Choose your own slice
 - We want to see what you care about the most
